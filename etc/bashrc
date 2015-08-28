@@ -1,0 +1,12 @@
+# Don't source bashrc if bash is not interactive
+if [[ $- == *"i"* ]]; then 
+    : # Interactive
+else
+    return
+fi
+
+# Append to history, don't overwrite it
+shopt -s histappend
+
+PS1='\u@\h:\w\$ '
+export EDITOR=/usr/bin/vim

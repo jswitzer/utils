@@ -1,5 +1,6 @@
 # Modified from https://help.github.com/articles/working-with-ssh-key-passphrases/#platform-windows
 # Also from http://stackoverflow.com/questions/3669001/getting-ssh-agent-to-work-with-git-run-from-windows-command-shell/15870387#15870387
+# The main difference is just exporting an environment.bat that can be sourced
 export SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
