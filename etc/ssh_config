@@ -1,0 +1,27 @@
+
+# Connection information
+ConnectTimeout 20
+ServerAliveInterval 15
+ServerAliveCountMax 3
+TCPKeepAlive yes
+Compression yes
+
+# Allow SSHv1
+Protocol 2,1
+
+# Hashing makes the known hosts file difficult to maintain
+HashKnownHosts no
+
+# Example cipher list
+# Ciphers arcfour,blowfish-cbc,aes128-cbc,3des-cbc,aes256-cbc,aes192-cbc,
+
+# I don't usually use X11
+ForwardX11Trusted yes
+ForwardX11 no
+
+# Don't forward the ssh agent, unless we override with particular hosts
+ForwardAgent no
+
+# Check Host IP is usually overkill. We already check for the key in known hosts
+CheckHostIP no
+
